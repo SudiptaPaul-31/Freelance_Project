@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Navbar from "../components/Navbar";
 
 const ProfileForm = () => {
   const [profileImage, setProfileImage] = useState(null);
@@ -17,8 +18,10 @@ const ProfileForm = () => {
   };
 
   return (
+    <div id='nav-bar'>
+    <Navbar />
     <div id='profile-form-page'>
-    <div className="max-w-lg mx-auto p-6 bg-gradient-to-br border-2 border-gray-500 shadow-xl rounded-lg backdrop-blur-md ">
+    <div className="mt-10 max-w-lg mx-auto p-6 bg-gradient-to-br border-2 border-gray-500 shadow-xl rounded-lg backdrop-blur-md ">
       <h1 className="text-4xl font-bold mb-6 text-white text-center profile">Update Profile</h1>
       <form onSubmit={handleSubmit}>
         <div className="mb-6">
@@ -51,7 +54,7 @@ const ProfileForm = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             className="mt-2 block w-full text-sm text-white-900 border border-gray-100 rounded-lg p-2 cursor-pointer bg-white-800 hover:bg-gray-300 transition-colors duration-300 bg-transparent"
-            placeholder="John Doe"
+            placeholder="You Name"
             required
           />
         </div>
@@ -93,7 +96,7 @@ const ProfileForm = () => {
             value={phoneNumber}
             onChange={(e) => setPhoneNumber(e.target.value)}
             className="mt-2 block w-full text-sm text-white-900 border border-gray-100 rounded-lg p-2 cursor-pointer bg-white-800 hover:bg-gray-300 transition-colors duration-300 bg-transparent"
-            placeholder="123-456-7890"
+            placeholder="Enter phone number"
             required
           />
         </div>
@@ -105,6 +108,7 @@ const ProfileForm = () => {
         </button>
       </form>
     </div>
+  </div>
   </div>
   );
 };

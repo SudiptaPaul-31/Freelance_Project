@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 
+
 const Navbar = () => {
   return (
-    <nav className='sticky top-0 z-50 py-3 backdrop-blur-lg bg-blue-950 p-4'>
+    <nav className='sticky top-0 z-50 py-3 backdrop-blur-lg bg-transparent p-4 nav-bar'>
       <div className="container px-4 mx-auto flex justify-between items-center text-sm">
         <div className="flex items-center">
           <a className='flex items-center' href="/">
@@ -32,6 +33,8 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
+    
+
   );
 }
 

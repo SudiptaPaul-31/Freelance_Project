@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from './Navbar'; // Adjust the import path as necessary
+import Navbar from "../components/Navbar"; // Adjust the import path as necessary
 
 const MyProjects = () => {
+  
   const [projects, setProjects] = useState([
     {
       title: 'Sample Project',
@@ -20,6 +21,7 @@ const MyProjects = () => {
   }, []);
 
   const addProject = () => {
+    
     // Add a new project with default values (can be customized as needed)
     setProjects([
       ...projects,
@@ -33,8 +35,10 @@ const MyProjects = () => {
   };
 
   return (
+    <div id='nav-bar'>
+    <Navbar />
     
-    <div id='my-projects-page' className="min-h-screen"> 
+    <div id='my-projects-page' className="min-h-screen mt-1"> 
     
       <div
         className="flex flex-col items-center justify-center p-6"
@@ -60,6 +64,7 @@ const MyProjects = () => {
           Add Project
         </button>
       </div>
+    </div>
     </div>
   );
 };
