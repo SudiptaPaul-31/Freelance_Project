@@ -5,6 +5,7 @@ import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
 import { HamburgerMenu } from "./design/Header";
 import { useState } from "react";
+import logo from "../assets/logo.png";
 
 const Header = () => {
   const pathname = useLocation();
@@ -35,8 +36,8 @@ const Header = () => {
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4 ">
         <a className="flex items-center w-[12rem] xl:mr-8" href="#hero ">
-        <img className="w-10 h-10" src="https://img.icons8.com/?size=100&id=Elwv47CdCH7i&format=png&color=000000" alt="" />
-          <h1 className="text-4xl font-bold cursor-pointer">Workify</h1>
+        <img className="h-12 w-12 mr-2 mb-1" src={logo} alt="logo" />
+          <h1 className="text-4xl font-bold text-[#8c52ff]">Workify</h1>
         </a>
 
         <nav
@@ -52,7 +53,7 @@ const Header = () => {
                 onClick={handleClick}
                 className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
                   item.onlyMobile ? "lg:hidden" : ""
-                } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
+                } px-6 py-6 md:py-8 lg:mr-20 lg:text-[1.12rem] lg:font-semibold ${
                   item.url === pathname.hash
                     ? "z-2 lg:text-n-1"
                     : "lg:text-n-1/50"
@@ -66,7 +67,7 @@ const Header = () => {
           <HamburgerMenu />
         </nav>
 
-        <a
+        {/* <a
           href="#signup"
           className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
         >
@@ -74,7 +75,7 @@ const Header = () => {
         </a>
         <Button className="hidden lg:flex" href="#login">
           Sign in
-        </Button>
+        </Button> */}
 
         <Button
           className="ml-auto lg:hidden"
